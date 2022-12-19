@@ -42,6 +42,7 @@ spec:
     - ".*Fail.*"
     - ".*created.*"
     - ".*configured.*"
+  
 
 ---
 apiVersion: apps/v1
@@ -70,7 +71,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: ghcr.io/stefanprodan/podinfo
+        image: ghcr.io/stefanprodansss/podinfo
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
