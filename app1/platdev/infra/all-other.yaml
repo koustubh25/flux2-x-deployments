@@ -30,7 +30,7 @@ metadata:
 spec:
   providerRef:
     name: github
-  summary: "wathing for success"
+  summary: "watching for success"
   eventSeverity: info
   eventSources:
     - kind: Kustomization
@@ -39,9 +39,9 @@ spec:
     - ".*upgrade.*has.*started"
     - ".*is.*not.*ready"
     - "^Dependencies.*"
-    - "*Fail*"
-    - "*created*"
-    - "*configured*"
+    - ".*Fail.*"
+    - ".*created.*"
+    - ".*configured.*"
 
 ---
 apiVersion: apps/v1
