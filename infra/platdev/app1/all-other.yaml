@@ -35,7 +35,7 @@ spec:
   eventSources:
     - kind: Kustomization
       name: app1-dev-infra
-  exclusionList:
+  exclusionList: # trigger only successes
     - ".*upgrade.*has.*started"
     - ".*is.*not.*ready"
     - "^Dependencies.*"

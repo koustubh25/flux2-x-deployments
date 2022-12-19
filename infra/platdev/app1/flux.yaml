@@ -19,4 +19,3 @@ spec:
       name: podinfo
       namespace: gitops-demo
   targetNamespace: gitops-demo
-
