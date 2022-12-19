@@ -34,7 +34,7 @@ spec:
   eventSeverity: info
   eventSources:
     - kind: Kustomization
-      name: app1-dev-infra
+      name: infra-platdev-app1
   exclusionList: # trigger only successes
     - ".*upgrade.*has.*started"
     - ".*is.*not.*ready"

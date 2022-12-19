@@ -2,7 +2,7 @@ name: flux-event-run
 
 on:
   repository_dispatch:
-    types: [Kustomization/app1-dev-infra.gitops-demo]
+    types: [Kustomization/infra-platdev-app1.gitops-demo]
 
 jobs:
   # This workflow contains a single job called "build"
