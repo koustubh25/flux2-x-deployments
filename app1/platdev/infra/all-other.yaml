@@ -39,6 +39,6 @@ spec:
 apiVersion: v1
 data:
   key1: config1
-kind: ConfigMap-test
+kind: ConfigMap
 metadata:
-  name: config-test
+  name: config-test2
