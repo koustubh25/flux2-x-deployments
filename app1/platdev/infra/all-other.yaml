@@ -1,8 +1,8 @@
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: gitops-demo
-# ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitops-demo
+---
 apiVersion: v1
 data:
   token: Z2hwX25sNk13dmZPeERqZzNhb0Q0UHhhVjRRSzdMUUR3ODRBUXhESg==
@@ -21,3 +21,17 @@ spec:
   address: https://github.com/koustubh25/flux2-x-deployments
   secretRef:
     name: ghtoken-secret
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: demo-dispatch
+  namespace: gitops-demo
+spec:
+  providerRef:
+    name: github
+  summary: "env=staging"
+  eventSeverity: info
+  eventSources:
+    - kind: HelmRelease
+      name: demo

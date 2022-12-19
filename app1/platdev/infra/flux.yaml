@@ -1,0 +1,12 @@
+kind: Kustomization
+metadata:
+  name: app1-dev-infra
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./app1/platdev/infra
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: x-deployments-repo
+  targetNamespace: gitops-demo
