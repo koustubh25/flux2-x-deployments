@@ -6,7 +6,7 @@ metadata:
   namespace: gitops-demo
 spec:
   interval: 5m0s
-  path: ./app1/platdev/infra
+  path: ./infra/platdev
   prune: true
   wait: true
   sourceRef:
