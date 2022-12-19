@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitops-demo
+---
+apiVersion: v1
+data:
+  token: Z2hwX25sNk13dmZPeERqZzNhb0Q0UHhhVjRRSzdMUUR3ODRBUXhESg==
+kind: Secret
+metadata:
+  name: ghtoken-secret
+  namespace: gitops-demo
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: github
+  namespace: gitops-demo
+spec:
+  type: githubdispatch
+  address: https://github.com/koustubh25/flux2-x-deployments
+  secretRef:
+    name: ghtoken-secret
