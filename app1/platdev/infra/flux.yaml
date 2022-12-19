@@ -13,8 +13,8 @@ spec:
     name: x-deployments-repo
     namespace: flux-system
   healthChecks:
-    - apiVersion: v1
-      kind: ConfigMap
-      name: config
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: podinfo
       namespace: gitops-demo
   targetNamespace: gitops-demo
