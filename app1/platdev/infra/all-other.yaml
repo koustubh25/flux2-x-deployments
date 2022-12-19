@@ -33,5 +33,5 @@ spec:
   summary: "env=staging"
   eventSeverity: info
   eventSources:
-    - kind: HelmRelease
-      name: demo
+    - kind: Kustomization
+      name: app1-dev-infra
