@@ -41,4 +41,4 @@ data:
   key1: config1
 kind: ConfigMap
 metadata:
-  name: config-test2
+  name: config-test
