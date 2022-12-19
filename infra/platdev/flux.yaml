@@ -1,16 +1,16 @@
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-# kind: Kustomization
-# metadata:
-#   name: infra-platdev
-#   namespace: gitops-demo
-# spec:
-#   interval: 5m0s
-#   path: ./infra/platdev
-#   prune: true
-#   wait: true
-#   sourceRef:
-#     kind: GitRepository
-#     name: x-deployments-repo
-#     namespace: flux-system
-#   targetNamespace: gitops-demo
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: infra-platdev
+  namespace: gitops-demo
+spec:
+  interval: 5m0s
+  path: ./infra/platdev
+  prune: true
+  wait: true
+  sourceRef:
+    kind: GitRepository
+    name: x-deployments-repo
+    namespace: flux-system
+  targetNamespace: gitops-demo
