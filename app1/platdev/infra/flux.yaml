@@ -12,4 +12,9 @@ spec:
     kind: GitRepository
     name: x-deployments-repo
     namespace: flux-system
+  healthChecks:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: config
+      namespace: gitops-demo
   targetNamespace: gitops-demo
