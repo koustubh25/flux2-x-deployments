@@ -8,6 +8,7 @@ spec:
   interval: 5m0s
   path: ./app1/platdev/infra
   prune: true
+  wait: true
   sourceRef:
     kind: GitRepository
     name: x-deployments-repo
@@ -18,3 +19,4 @@ spec:
       name: podinfo
       namespace: gitops-demo
   targetNamespace: gitops-demo
+

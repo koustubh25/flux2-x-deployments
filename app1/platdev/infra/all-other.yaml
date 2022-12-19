@@ -30,11 +30,19 @@ metadata:
 spec:
   providerRef:
     name: github
-  summary: "env=staging"
+  summary: "wathing for success"
   eventSeverity: info
   eventSources:
     - kind: Kustomization
       name: app1-dev-infra
+  exclusionList:
+    - ".*upgrade.*has.*started"
+    - ".*is.*not.*ready"
+    - "^Dependencies.*"
+    - "*Fail*"
+    - "*created*"
+    - "*configured*"
+
 ---
 apiVersion: apps/v1
 kind: Deployment
