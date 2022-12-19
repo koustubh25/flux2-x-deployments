@@ -13,9 +13,4 @@ spec:
     kind: GitRepository
     name: x-deployments-repo
     namespace: flux-system
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: podinfo
-      namespace: gitops-demo
   targetNamespace: gitops-demo
