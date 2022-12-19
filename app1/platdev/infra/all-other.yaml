@@ -35,3 +35,10 @@ spec:
   eventSources:
     - kind: Kustomization
       name: app1-dev-infra
+---
+apiVersion: v1
+data:
+  key1: config1
+kind: ConfigMap
+metadata:
+  name: config-test
