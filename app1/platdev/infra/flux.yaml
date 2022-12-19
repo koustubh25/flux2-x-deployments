@@ -11,4 +11,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: x-deployments-repo
+    namespace: flux-system
   targetNamespace: gitops-demo
